@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appMain">
+<head>
+    <style>
+        .local-center {
+            text-align: center;
+        }
+
+        .local-right {
+            text-align: right;
+        }
+
+        .form > .row {
+            padding-bottom: 10px;
+        }
+
+        .message-block {
+            border-radius: 10px;
+            background: #FFF0F0;
+        }
+
+        .body-background {
+            background: #F0FFFF;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Рекрутинг</title>
+
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <script src="static/bootstrap.bundle.js"></script>
+    <script src="static/angular.js"></script>
+    <script src="static/angular-route.js"></script>
+
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+
+    <script src="pages/sign-in/sign-in.module.js"></script>
+    <script src="pages/sign-in/sign-in.service.js"></script>
+    <script src="pages/sign-in/sign-in.component.js"></script>
+
+    <script src="pages/sign-up/sign-up.module.js"></script>
+    <script src="pages/sign-up/sign-up.service.js"></script>
+    <script src="pages/sign-up/sign-up.component.js"></script>
+
+    <script src="pages/home/home.module.js"></script>
+    <script src="pages/home/home.service.js"></script>
+    <script src="pages/home/home.component.js"></script>
+
+    <script src="pages/resume-list/resume-list.module.js"></script>
+    <script src="pages/resume-list/resume-list.service.js"></script>
+    <script src="pages/resume-list/resume-list.component.js"></script>
+
+    <script src="pages/resume/resume.module.js"></script>
+    <script src="pages/resume/resume.service.js"></script>
+    <script src="pages/resume/resume.component.js"></script>
+
+    <script src="pages/favorites/favorites.module.js"></script>
+    <script src="pages/favorites/favorites.service.js"></script>
+    <script src="pages/favorites/favorites.component.js"></script>
+
+    <script src="pages/to-send/to-send.module.js"></script>
+    <script src="pages/to-send/to-send.service.js"></script>
+    <script src="pages/to-send/to-send.component.js"></script>
+
+    <script src="pages/add-resume/add-resume.module.js"></script>
+    <script src="pages/add-resume/add-resume.service.js"></script>
+    <script src="pages/add-resume/add-resume.component.js"></script>
+
+    <script src="pages/vacancy-list/vacancy-list.module.js"></script>
+    <script src="pages/vacancy-list/vacancy-list.service.js"></script>
+    <script src="pages/vacancy-list/vacancy-list.component.js"></script>
+
+    <script src="pages/vacancy/vacancy.module.js"></script>
+    <script src="pages/vacancy/vacancy.service.js"></script>
+    <script src="pages/vacancy/vacancy.component.js"></script>
+
+    <script src="pages/add-vacancy/add-vacancy.module.js"></script>
+    <script src="pages/add-vacancy/add-vacancy.service.js"></script>
+    <script src="pages/add-vacancy/add-vacancy.component.js"></script>
+
+    <script src="pages/report-list/report-list.module.js"></script>
+    <script src="pages/report-list/report-list.service.js"></script>
+    <script src="pages/report-list/report-list.component.js"></script>
+
+    <script src="interceptor/response-interceptor.module.js"></script>
+    <script src="interceptor/response-interceptor.service.js"></script>
+</head>
+
+<body class="body-background">
+<br>
+<div class="container message-block" hidden id="errorMessageBlock">
+    <p>Error:</p>
+    <hr>
+    <div class="row">
+        <p id="errorMessage"></p>
+    </div>
+</div>
+<br>
+<div ng-view></div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<div class="container">
+    <a class="btn btn-primary" href="#!/home">Главная</a>
+    <br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Специальность</th>
+            <th>Должность</th>
+            <th>Действие</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="vacancy in $ctrl.vacancyList">
+            <td class="col-sm-5"><a href="#!/vacancy/{{vacancy.id}}">{{vacancy.profession}}</a></td>
+            <td class="col-sm-5">{{vacancy.post}}</td>
+            <td class="col-sm-2">
+                <form ng-submit="$ctrl.Respond(vacancy.id)">
+                    <button class="btn btn-primary">Откликнуться</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

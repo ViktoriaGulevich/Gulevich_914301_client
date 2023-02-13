@@ -1,0 +1,46 @@
+<div class="container">
+    <form class="form">
+        <div class="row">
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.vacancy.profession" placeholder="Специальность" type="text">
+            </div>
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.vacancy.post" placeholder="Должность" type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="$ctrl.vacancy.timeOfEmployment"
+                       placeholder="Желаемое количество рабочих часов (Ставка)"
+                       type="text">
+            </div>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="$ctrl.vacancy.workExperience" placeholder="Опыт работы в месяцах"
+                       type="text">
+            </div>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="$ctrl.vacancy.salary" placeholder="Заработная плата" type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <input class="form-control" ng-model="$ctrl.vacancy.skills"
+                       placeholder="Ключевые навыки, перечисленные через ', '"
+                       type="text">
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-2">
+            <a class="btn btn-primary" href="#!/home">Главная</a>
+        </div>
+        <div class="col-sm-8">
+            <div class="local-center">
+                <button class="btn btn-primary" ng-click="$ctrl.Add()">Сохранить</button>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>

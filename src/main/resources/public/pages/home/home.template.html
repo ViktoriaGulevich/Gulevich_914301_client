@@ -1,0 +1,52 @@
+<div class="container">
+    <h2>Добро пожаловать, {{$ctrl.login}}!!!</h2>
+
+
+    <div ng-if="$ctrl.isUser()">
+        <h1>Функциональность соискателя</h1>
+
+        <a class="btn btn-primary" href="#!/vacancy-list">Список всех вакансий</a>
+        <br>
+        <br>
+        <div ng-switch="$ctrl.isExistsResume()">
+            <div ng-switch-when="true">
+                <a class="btn btn-primary" href="#!/resume/{{$ctrl.resumeId}}">Резюме</a>
+            </div>
+            <div ng-switch-default>
+                <a class="btn btn-primary" href="#!/add-resume">Резюме</a>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <div ng-if="$ctrl.isRecruiter()">
+        <h1>Функциональность рекрутера</h1>
+
+        <a class="btn btn-primary" href="#!/resume-list">Список всех резюме</a>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="#!/favorites">Список избранных резюме</a>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="#!/to-send">Список резюме на рассылку</a>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="#!/report">Список отчетов</a>
+        <br>
+        <br>
+
+        <div ng-switch="$ctrl.isExistsVacancy()">
+            <div ng-switch-when="true">
+                <a class="btn btn-primary" href="#!/vacancy/{{$ctrl.vacancyId}}">Вакансия</a>
+            </div>
+            <div ng-switch-default>
+                <a class="btn btn-primary" href="#!/add-vacancy">Вакансия</a>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <form ng-submit="$ctrl.logout()">
+        <button class="btn btn-primary">Выход</button>
+    </form>
+</div>

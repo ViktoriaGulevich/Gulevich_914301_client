@@ -1,0 +1,29 @@
+<div class="container">
+    <form ng-submit="$ctrl.signIn(user)">
+        <div class="local-center">
+            <p>Добро пожаловать!</p>
+        </div>
+        <div class="form-group">
+            <label for="login">Имя пользователя</label>
+            <input class="form-control" id="login" ng-model="user.login" ng-value="$ctrl.user.login" type="text">
+        </div>
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input class="form-control" id="password" ng-model="user.password" ng-value="$ctrl.user.password"
+                   type="password">
+        </div>
+        <br>
+        <div class="local-center button">
+            <button class="btn btn-primary">Вход</button>
+        </div>
+    </form>
+    <br>
+    <div class="local-center ">
+        <p>Впервые у нас? Зарегистрируйтесь!</p>
+    </div>
+    <div class="local-center button">
+        <form ng-submit="$ctrl.signUp(user)">
+            <button class="btn btn-primary">Регистация</button>
+        </form>
+    </div>
+</div>

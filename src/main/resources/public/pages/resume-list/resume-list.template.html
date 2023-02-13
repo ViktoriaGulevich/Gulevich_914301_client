@@ -1,0 +1,96 @@
+<div class="container">
+    <a class="btn btn-primary" href="#!/home">Главная</a>
+    <br>
+    <form class="form" ng-submit="$ctrl.Find()">
+
+        <div class="form-check">
+            <input class="form-check-input" id="man" ng-model="$ctrl.filter.sexM" type="checkbox">
+            <label class="form-check-label" for="man">Мужской</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" id="woman" ng-model="$ctrl.filter.sexW" type="checkbox">
+            <label class="form-check-label" for="woman">Женский</label>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.filter.ageFrom" placeholder="Минимальный возраст" type="text">
+            </div>
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.filter.ageTo" placeholder="Максимальный возраст" type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.filter.profession" placeholder="Специальность" type="text">
+            </div>
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.filter.post" placeholder="Должность" type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.filter.workExperience" placeholder="Опыт работы в месяцах"
+                       type="text">
+            </div>
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.filter.timeOfEmployment"
+                       placeholder="Желаемое количество рабочих часов (Ставка)"
+                       type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.filter.typeOfEmployment"
+                       placeholder="Тип занятости (очное, удаленно)"
+                       type="text">
+            </div>
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.filter.salary" placeholder="Заработная плата" type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <input class="form-control" ng-model="$ctrl.filter.skills"
+                       placeholder="Ключевые навыки, перечисленные через ', '"
+                       type="text">
+            </div>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" id="isRespond" ng-model="$ctrl.filter.isRespond" type="checkbox">
+            <label class="form-check-label" for="isRespond">Откликнулся на вакансию</label>
+        </div>
+
+        <div class="row">
+            <div class="local-center">
+                <button class="btn btn-primary">Найти</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Фамилия Имя Отчество</th>
+            <th>Специальность</th>
+            <th>Действие</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="resume in $ctrl.resumeList">
+            <td class="col-sm-4"><a href="#!/resume/{{resume.id}}">{{resume.fio}}</a></td>
+            <td class="col-sm-4">{{resume.profession}}</td>
+            <td class="col-sm-4">
+                <form ng-submit="$ctrl.Add(resume.id)">
+                    <button class="btn btn-primary">В список избранных</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

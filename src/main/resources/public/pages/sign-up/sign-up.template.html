@@ -1,0 +1,34 @@
+<div class="container">
+    <form class="form" ng-submit="$ctrl.signUp(user)">
+
+        <div class="form-group row">
+            <label class="col-sm-3" for="email">Email</label>
+            <div class="col-sm-9">
+                <input class="form-control " id="email" ng-model="user.email" type="email">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3" for="password">Пароль</label>
+            <div class="col-sm-9">
+                <input class="form-control" id="password" ng-model="user.password" type="password">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3" for="login">Имя пользователя</label>
+            <div class="col-sm-9">
+                <input class="form-control" id="login" ng-model="user.login" type="text">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-2">
+                <a class="btn btn-primary" href="#!/home">Главная</a>
+            </div>
+            <div class="col-sm-8">
+                <div class="local-center">
+                    <button class="btn btn-primary">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

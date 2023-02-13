@@ -1,0 +1,68 @@
+<div class="container">
+    <form class="form">
+        <div class="form-group" hidden>
+            <input class="form-control" id="id" ng-model="$ctrl.vacancy.id" ng-value="$ctrl.vacancy.id" type="text">
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.vacancy.profession" ng-value="$ctrl.vacancy.profession"
+                       placeholder="Специальность" type="text">
+            </div>
+            <div class="col-sm-6">
+                <input class="form-control" ng-model="$ctrl.vacancy.post" ng-value="$ctrl.vacancy.post"
+                       placeholder="Должность"
+                       type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="$ctrl.vacancy.timeOfEmployment"
+                       ng-value="$ctrl.vacancy.timeOfEmployment"
+                       placeholder="Желаемое количество рабочих часов (Ставка)"
+                       type="text">
+            </div>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="$ctrl.vacancy.workExperience"
+                       ng-value="$ctrl.vacancy.workExperience" placeholder="Опыт работы в месяцах" type="text">
+            </div>
+            <div class="col-sm-4">
+                <input class="form-control" ng-model="$ctrl.vacancy.salary" ng-value="$ctrl.vacancy.salary"
+                       placeholder="Заработная плата"
+                       type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <input class="form-control" ng-model="$ctrl.vacancy.skills" ng-value="$ctrl.vacancy.skills"
+                       placeholder="Ключевые навыки, перечисленные через ', '"
+                       type="text">
+            </div>
+        </div>
+
+    </form>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <a class="btn btn-primary" href="#!/home">Главная</a>
+        </div>
+        <div class="col-sm-8">
+            <div class="local-center">
+                <div ng-if="$ctrl.isRecruiter()">
+                    <button class="btn btn-primary" ng-click="$ctrl.Update()">Обновить</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="local-right">
+                <form ng-submit="$ctrl.Delete()">
+                    <div ng-if="$ctrl.isRecruiter()">
+                        <button class="btn btn-primary">Удалить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
