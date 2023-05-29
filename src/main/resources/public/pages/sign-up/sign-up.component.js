@@ -7,8 +7,12 @@ angular.module('signUp')
     })
     .controller('SignUpController', ['$location', 'SignUpService', '$route',
         function ($location, SignUpService, $route) {
-            this.signUp = function (user) {
-                SignUpService.SignUp(user).then(
+            var that = this;
+            this.signUp = function () {
+                SignUpService.SignUp(that.user);
+            };
+            this.confirmCode = function () {
+                SignUpService.Confirm(that.code,that.user).then(
                     function () {
                         $location.path('/sign-in');
                     },
@@ -16,6 +20,6 @@ angular.module('signUp')
                         $route.reload();
                     }
                 );
-            };
+            }
         }
     ]);

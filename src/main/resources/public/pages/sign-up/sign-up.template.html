@@ -1,34 +1,49 @@
 <div class="container">
-    <form class="form" ng-submit="$ctrl.signUp(user)">
-
+    <form class="form">
         <div class="form-group row">
             <label class="col-sm-3" for="email">Email</label>
             <div class="col-sm-9">
-                <input class="form-control " id="email" ng-model="user.email" type="email">
+                <input class="form-control " id="email" ng-model="$ctrl.user.email" type="email">
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-3" for="password">Пароль</label>
             <div class="col-sm-9">
-                <input class="form-control" id="password" ng-model="user.password" type="password">
+                <input class="form-control" id="password" ng-model="$ctrl.user.password" type="password">
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-3" for="login">Имя пользователя</label>
             <div class="col-sm-9">
-                <input class="form-control" id="login" ng-model="user.login" type="text">
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-2">
-                <a class="btn btn-primary" href="#!/home">Главная</a>
-            </div>
-            <div class="col-sm-8">
-                <div class="local-center">
-                    <button class="btn btn-primary">Зарегистрироваться</button>
-                </div>
+                <input class="form-control" id="login" ng-model="$ctrl.user.login" type="text">
             </div>
         </div>
     </form>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <a class="btn btn-primary" href="#!/home">Главная</a>
+        </div>
+        <div class="col-sm-8">
+            <div class="local-center">
+                <button class="btn btn-primary" ng-click="$ctrl.signUp()">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
+
+    <form class="form">
+        <div class="row">
+            <label class="col-sm-3" for="code">Код</label>
+            <div class="col-sm-9">
+                <input class="form-control" id="code" ng-model="$ctrl.code" type="text">
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="local-center">
+                <button class="btn btn-primary" ng-click="$ctrl.confirmCode()">Отправить код</button>
+            </div>
+        </div>
+    </div>
 </div>
