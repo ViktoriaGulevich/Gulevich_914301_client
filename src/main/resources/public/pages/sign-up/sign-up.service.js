@@ -13,13 +13,14 @@ angular.module('signUp')
                 });
             };
 
-           service.Confirm = function (code,user){
-                return $http.post($rootScope.rootPath + '/user/'+code, {
+            service.Confirm = function (code, user) {
+                return $http.post($rootScope.rootPath + '/user/' + code, {
                     login: user.login,
                     email: user.email,
-                    password: user.password
+                    password: user.password,
+                    isRecruiter: user.isRecruiter
                 });
-           };
+            };
 
             return service;
         }

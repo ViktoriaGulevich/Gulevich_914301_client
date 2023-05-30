@@ -18,19 +18,21 @@
                 <input class="form-control" id="login" ng-model="$ctrl.user.login" type="text">
             </div>
         </div>
-    </form>
-
-    <div class="row">
-        <div class="col-sm-2">
-            <a class="btn btn-primary" href="#!/home">Главная</a>
+        <div class="form-group row">
+            <label class="col-sm-3" for="isRecruiter">Рекрутер</label>
+            <div class="col-sm-9">
+                <input class="form-checkbox" id="isRecruiter" ng-model="$ctrl.user.isRecruiter" type="checkbox">
+            </div>
         </div>
-        <div class="col-sm-8">
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
             <div class="local-center">
                 <button class="btn btn-primary" ng-click="$ctrl.signUp()">Зарегистрироваться</button>
             </div>
         </div>
     </div>
-
+    <br>
     <form class="form">
         <div class="row">
             <label class="col-sm-3" for="code">Код</label>
@@ -39,8 +41,12 @@
             </div>
         </div>
     </form>
+    <br>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-2">
+            <a class="btn btn-primary" href="#!/home">Главная</a>
+        </div>
+        <div class="col-sm-8">
             <div class="local-center">
                 <button class="btn btn-primary" ng-click="$ctrl.confirmCode()">Отправить код</button>
             </div>

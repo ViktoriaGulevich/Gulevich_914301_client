@@ -12,6 +12,7 @@ angular.module('signUp')
                 SignUpService.SignUp(that.user);
             };
             this.confirmCode = function () {
+                console.log(that.user)
                 SignUpService.Confirm(that.code,that.user).then(
                     function () {
                         $location.path('/sign-in');
